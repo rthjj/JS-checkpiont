@@ -79,20 +79,16 @@ console.log(count3);
 
 //-----------------6--------------------//
 
-var cyan1= 23, magenta1=12, yellow1=10
-var cyan2=432, magenta2=543, yellow2=777
-var cyan3=700, magenta3=700, yellow3=0
-
-var ink1 = myFunction (cyan1,magenta1,yellow1)
-var ink2 = myFunction(cyan2,magenta2,yellow2)
-var ink3 = myFunction(cyan3,magenta3,yellow3);   
-
-function myFunction(a, b,c) {
-  return (Math.min(a , b, c));             
+var liste1 = { cyan: 23, magenta:12, yellow:10}
+var liste2= {cyan2:432, magenta2:543, yellow2:777}
+var liste3 = {cyan3:700, magenta3:700, yellow3:0}
+function myFunction(liste) {
+  var a =Object.values(liste)
+  return (Math.min(...a));             
 }
-console.log(ink1)
-console.log(ink2)
-console.log(ink3)
+console.log(myFunction(liste1))
+console.log(myFunction(liste2))
+console.log(myFunction(liste3))
 
 //-------------7-----------//
 
